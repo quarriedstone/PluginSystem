@@ -108,7 +108,7 @@ DWORD registry_processing() {
 DWORD perfmon_write(int numbBytes) {
 	LONG st = RegSetValueEx(hPerfKey, L"Input Value", 0, REG_DWORD, (LPBYTE)&numbBytes, sizeof(int));
 	if (st != ERROR_SUCCESS) {
-		printf("PerfMon: cannot write to registry");
+		printf("PerfMon: cannot write to registry\n");
 		return 1;
 	}
 
@@ -332,7 +332,7 @@ int main(int argc, char* argv[])
 	
 	// Open the key for PluginList and PerfMon 
 	long sts = RegOpenKeyEx(HKEY_CURRENT_USER, strKeyName, 0, KEY_ALL_ACCESS, &hKey);
-			   RegOpenKeyEx(HKEY_CURRENT_USER, strPerfGen, 0L, KEY_ALL_ACCESS, &hPerfKey);
+	long st =  RegOpenKeyEx(HKEY_CURRENT_USER, strPerfGen, 0L, KEY_ALL_ACCESS, &hPerfKey);
 
 	// Runing thread
 	if (sts == ERROR_SUCCESS) {
@@ -341,7 +341,11 @@ int main(int argc, char* argv[])
 
 		RegNotifyChangeKeyValue(hKey, TRUE, dwFilter, handle_event, TRUE);
 	}
-
+	// Create key for Perfmon if there is none
+	if (ERROR_NO_MATCH == st || ERROR_FILE_NOT_FOUND == st)
+	{
+		RegCreateKeyEx(HKEY_CURRENT_USER, strPerfGen, NULL, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hPerfKey, NULL);
+	}
 
 	server(argc, argv);
 	return 0;
