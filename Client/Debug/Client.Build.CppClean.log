@@ -1,14 +1,14 @@
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.pch
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\vc141.pdb
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\vc141.idb
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\stdafx.obj
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.obj
-r:\studies\3-year-2-semester\windows services\pluginsystem\debug\client.ilk
-r:\studies\3-year-2-semester\windows services\pluginsystem\debug\client.exe
-r:\studies\3-year-2-semester\windows services\pluginsystem\debug\client.pdb
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.tlog\cl.command.1.tlog
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.tlog\cl.read.1.tlog
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.tlog\cl.write.1.tlog
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.tlog\link.command.1.tlog
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.tlog\link.read.1.tlog
-r:\studies\3-year-2-semester\windows services\pluginsystem\client\debug\client.tlog\link.write.1.tlog
+d:\projects\pluginsystem\client\debug\client.pch
+d:\projects\pluginsystem\client\debug\vc142.pdb
+d:\projects\pluginsystem\client\debug\vc142.idb
+d:\projects\pluginsystem\client\debug\stdafx.obj
+d:\projects\pluginsystem\client\debug\client.obj
+d:\projects\pluginsystem\debug\client.ilk
+d:\projects\pluginsystem\debug\client.exe
+d:\projects\pluginsystem\debug\client.pdb
+d:\projects\pluginsystem\client\debug\client.tlog\cl.command.1.tlog
+d:\projects\pluginsystem\client\debug\client.tlog\cl.read.1.tlog
+d:\projects\pluginsystem\client\debug\client.tlog\cl.write.1.tlog
+d:\projects\pluginsystem\client\debug\client.tlog\link.command.1.tlog
+d:\projects\pluginsystem\client\debug\client.tlog\link.read.1.tlog
+d:\projects\pluginsystem\client\debug\client.tlog\link.write.1.tlog

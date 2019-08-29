@@ -14,7 +14,7 @@
 typedef struct _DllListElement
 {
 	GUID pluginId;
-	const wchar_t* DllName;
+	wchar_t DllName[256];
 	pfn_GetCopyright GetCopyright;
 } DllListElement;
 

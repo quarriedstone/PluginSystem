@@ -21,7 +21,7 @@ DWORD type = REG_SZ;
 typedef struct _DllListElement
 {
 	GUID pluginId;
-	const wchar_t* DllName;
+	wchar_t DllName[256];
 	pfn_GetCopyright GetCopyright;
 } DllListElement;
 
@@ -87,7 +87,10 @@ DWORD registry_processing() {
 				auto element = *i;
 				if (IsEqualGUID(element.pluginId, guid))
 				{
-					*i = DllListElement({ guid, buffer, nullptr });
+					DllListElement ll = { guid, L"\0", nullptr };
+					wcscpy_s(ll.DllName, 256, buffer);
+					*i = ll;
+
 					printf("PluginList: Plugin with GUID %S was updated\n", guid_string);
 					printf("PluginList: New plugin name - %S \n", buffer);
 					upd = true;
